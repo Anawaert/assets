@@ -1,7 +1,9 @@
 # Anawaert Assets
-This repository is used to store multiple resources of Anawaert, such as images, design features, configuration, automated scripts and utilities, etc.
+This repository is used to store various resources for Anawaert, such as images, design features, configuration files, automated scripts and utilities.
 
-The repository now has two sections: 
-*   [`/Server`](./Server/README.md): The directory that stores some automated scripts and utilities of Anawaert Server.
+The repository currently has three sections: 
+-   [`Server/`](./Server/README.md): The directory that stores some automated scripts and utilities of Anawaert Server.
 
-*   [`/Images`](./Images/README.md): The directory that stores the image resources designed by Anawaert or used in Anawaert products.
+-   [`Images/`](./Images/README.md): The directory that stores the image resources designed by Anawaert or used in Anawaert products.
+
+-   [`Terminal/`](./Terminal/README.md): The directory that stores some profile files of terminal applications on various platforms.
