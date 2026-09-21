@@ -17,7 +17,7 @@ try
     # If repoName contains "Blog", trigger the blog automation script, same to other automation scripts.
     if ($repoName -match "Blog") 
     {
-        & (Join-Path $PSScriptRoot "UpdateBlog.ps1")
+        & (Join-Path $PSScriptRoot "update-blog.ps1")
     }
     # elseif ($repoName -match "Tree-Hollow") 
     # {
@@ -25,7 +25,7 @@ try
     # }
     elseif ($repoName -match "docs") 
     {
-        & (Join-Path $PSScriptRoot "UpdateDocs.ps1")
+        & (Join-Path $PSScriptRoot "update-docs.ps1")
     }
     else 
     {
