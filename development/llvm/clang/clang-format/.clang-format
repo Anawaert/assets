@@ -1,0 +1,154 @@
+# C++：基于 Microsoft Calculator 风格并结合 .NET/C# 排版；
+# 兼容基线为 clang-format 17，开发者应统一版本；
+# 仅控制排版，不强制命名规则。
+# C++: based on Microsoft Calculator style with .NET/C# layout conventions;
+# Compatibility baseline: clang-format 17; developers should use the same version;
+# Controls formatting only; naming conventions are not enforced.
+
+# Copyright (C) 2017-2026 Anawaert Studio.
+---
+
+Language: Cpp
+BasedOnStyle: Microsoft
+Standard: Latest
+
+# 缩进与行宽。
+# Indentation and line width.
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ContinuationIndentWidth: 4
+ColumnLimit: 120
+
+# 命名空间、访问标签、switch 和预处理指令的缩进。
+# Indentation for namespaces, access labels, switch statements and preprocessor directives.
+NamespaceIndentation: All
+CompactNamespaces: false
+FixNamespaceComments: false
+IndentAccessModifiers: false
+AccessModifierOffset: -4
+IndentCaseLabels: true
+
+# 遵循 .NET Runtime：case 的花括号与标签对齐。
+# Follow .NET Runtime: align case braces with their labels.
+IndentCaseBlocks: false
+IndentGotoLabels: true
+IndentExternBlock: Indent
+IndentPPDirectives: None
+
+# 显式采用 Allman，并应用以下规则。
+# Use Allman explicitly and apply the following rules.
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel: true
+  AfterClass: true
+  AfterControlStatement: Always
+  AfterEnum: true
+  AfterExternBlock: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterStruct: true
+  AfterUnion: true
+  BeforeCatch: true
+  BeforeElse: true
+  BeforeLambdaBody: true
+  BeforeWhile: true
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+
+# 展开所有短代码块和 Lambda。
+# Expand all short blocks and lambdas.
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: None
+AllowShortLoopsOnASingleLine: false
+
+# 模板关键字后留空格，声明另起一行。
+# Add a space after the template keyword and break declarations onto a new line.
+SpaceAfterTemplateKeyword: true
+
+# 保留旧选项名；新版名称为 BreakTemplateDeclarations。
+# Retain the legacy option name; newer versions use BreakTemplateDeclarations.
+AlwaysBreakTemplateDeclarations: 'Yes'
+BreakBeforeConceptDeclarations: Always
+RequiresClausePosition: OwnLine
+IndentRequiresClause: false
+
+# 指针和引用靠近类型；保留限定符位置。
+# Attach pointers and references to types; preserve qualifier positions.
+DerivePointerAlignment: false
+PointerAlignment: Left
+ReferenceAlignment: Left
+QualifierAlignment: Leave
+
+# 控制语句括号前留空格，函数调用不留。
+# Add a space before control-statement parentheses, but not function-call parentheses.
+SpaceBeforeParens: ControlStatements
+SpacesInParens: Never
+SpacesInAngles: Never
+SpacesInSquareBrackets: false
+SpaceBeforeSquareBrackets: false
+SpaceAfterCStyleCast: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+
+# 保留 Calculator 的列表初始化风格：values{ 1, 2, 3 }。
+# Retain Calculator's list-initialisation style: values{ 1, 2, 3 }.
+Cpp11BracedListStyle: false
+SpaceBeforeCpp11BracedList: false
+
+# 参数可放下时保持单行，否则每行一个。
+# Keep parameters on one line when they fit; otherwise use one per line.
+AlignAfterOpenBracket: AlwaysBreak
+BinPackArguments: false
+BinPackParameters: false
+AllowAllArgumentsOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+AlwaysBreakAfterReturnType: None
+IndentWrappedFunctionNames: false
+
+# 多行表达式和初始化列表不作表格式对齐。
+# Do not tabularly align multiline expressions or initialiser lists.
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeTernaryOperators: true
+AlignOperands: DontAlign
+BreakConstructorInitializers: BeforeColon
+ConstructorInitializerIndentWidth: 4
+PackConstructorInitializers: CurrentLine
+BreakInheritanceList: BeforeColon
+AlignConsecutiveAssignments: None
+AlignConsecutiveDeclarations: None
+AlignConsecutiveMacros: None
+AlignConsecutiveBitFields: None
+AlignArrayOfStructures: None
+AlignTrailingComments:
+  Kind: Never
+AlignEscapedNewlines: DontAlign
+
+# 保留手工注释换行，不对齐行尾注释。
+# Preserve manual comment wrapping and do not align trailing comments.
+ReflowComments: false
+SpacesBeforeTrailingComments: 1
+MaxEmptyLinesToKeep: 1
+KeepEmptyLinesAtTheStartOfBlocks: false
+LineEnding: DeriveLF
+InsertNewlineAtEOF: true
+
+# 不重排依赖或执行语法改写。
+# Do not reorder dependencies or perform syntactic rewrites.
+SortIncludes: Never
+IncludeBlocks: Preserve
+SortUsingDeclarations: Never
+InsertBraces: false
+RemoveBracesLLVM: false
+RemoveParentheses: Leave
+RemoveSemicolon: false
+BreakStringLiterals: false
+...
